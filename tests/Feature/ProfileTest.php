@@ -65,7 +65,7 @@ test('user can delete their account', function () {
 
     $this->assertGuest();
     $this->assertNull($user->fresh());
-})->skip('later');
+});
 
 test('correct password must be provided to delete account', function () {
     $user = User::factory()->create();
