@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Admin',
-            'email' => 'admin@reverb.jaw.dev',
+            'email' => 'admin@slack.jaw.dev',
         ]);
     }
 }
