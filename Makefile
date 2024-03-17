@@ -10,6 +10,9 @@ log:
 down:
 	docker compose down
 
+refresh:
+	php artisan migrate:refresh --seed
+
 clean:
 	docker compose down --rmi all
 
