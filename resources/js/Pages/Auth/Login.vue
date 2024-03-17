@@ -13,9 +13,9 @@ defineProps<{
 }>();
 
 const form = useForm({
-    email: '',
-    password: '',
-    remember: false,
+    email: 'admin@slack.jaw.dev',
+    password: 'password',
+    remember: true,
 });
 
 const submit = () => {
