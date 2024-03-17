@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_channels', function (Blueprint $table) {
+        Schema::create('user_channel', function (Blueprint $table) {
             $table->unique(['user_id', 'channel_id']);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('channel_id')->constrained()->onDelete('cascade');
