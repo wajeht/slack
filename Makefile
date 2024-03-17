@@ -15,6 +15,9 @@ down:
 	docker compose down
 
 refresh:
+	trash /Users/jaw/Dev/slack/database/database.sqlite
+	touch /Users/jaw/Dev/slack/database/database.sqlite
+	php artisan migrate:refresh --seed
 	php artisan migrate:refresh --seed
 
 clean:
