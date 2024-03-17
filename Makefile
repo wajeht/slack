@@ -37,7 +37,7 @@ lint:
 format:
 	docker compose exec app npm run format
 
-commit:
+push:
 	make test
 	# npm run format
 	# npm run lint
