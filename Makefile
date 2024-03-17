@@ -27,7 +27,9 @@ wipe:
 	docker system prune -a --volumes
 
 test:
-	docker compose exec app npm run test
+	# docker compose exec app npm run test
+	npm run test
+	php artisan test
 
 lint:
 	docker compose exec app npm run lint
@@ -36,7 +38,7 @@ format:
 	docker compose exec app npm run format
 
 commit:
-	php artisan test
+	make test
 	# npm run format
 	# npm run lint
 	git add -A
