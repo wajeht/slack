@@ -36,7 +36,7 @@ format:
 	docker compose exec app npm run format
 
 commit:
-	# npm run test
+	php artisan test
 	# npm run format
 	# npm run lint
 	git add -A
