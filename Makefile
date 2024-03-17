@@ -1,3 +1,7 @@
+start:
+	@hash concurrently 2>/dev/null || { echo >&2 "I require 'concurrently' but it's not installed globally.  Installing it..."; npm install -g concurrently; }
+	@concurrently --kill-others --names "LARAVEL,REVERB,NPM" -c "bgRed.black,bgMagenta.black,bgGreen.black" "php artisan serve" "php artisan reverb:start --debug" "npm run dev"
+
 up:
 	docker compose up
 
