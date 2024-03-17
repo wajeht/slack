@@ -12,7 +12,7 @@ const confirmingUserDeletion = ref(false);
 const passwordInput = ref<HTMLInputElement | null>(null);
 
 const form = useForm({
-    password: '',
+    password: 'password',
 });
 
 const confirmUserDeletion = () => {
