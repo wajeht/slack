@@ -3,9 +3,13 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "type-check": "vue-tsc --noEmit",
+        "test:watch": "vitest",
         "test": "vitest --run",
-        "test-watch": "vitest",
-        "build": "vue-tsc && vite build && vite build --ssr"
+        "format": "prettier \"resources/**/*.{js,ts,vue}\" --write",
+        "lint": "eslint \"resources/**/*.{js,ts,vue}\" --fix",
+        "build": "npm run format && npm run lint && npm run type-check && vite build && vite build --ssr",
+        "build:prod": "vue-tsc && vite build && vite build --ssr"
     },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
