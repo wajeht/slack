@@ -14,7 +14,7 @@ log:
 down:
 	docker compose down
 
-refresh:
+reset-db:
 	trash /Users/jaw/Dev/slack/database/database.sqlite
 	touch /Users/jaw/Dev/slack/database/database.sqlite
 	php artisan migrate:refresh --seed
